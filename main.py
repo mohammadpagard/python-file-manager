@@ -20,8 +20,6 @@ class FileManager:
 		full_address = os.path.join(address, name)
 		os.remove(full_address)
 
-	def restore(self, name):
-		pass
 
 a1 = FileManager()
 a1.find("/home/mohammad/Desktop/python-test/")
