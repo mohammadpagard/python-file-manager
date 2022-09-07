@@ -15,9 +15,11 @@ class FileManager:
 		os.makedirs(full_address)
 
 	def delete(self, address, name):
-		pass
+		full_address = os.path.join(address, name)
+		os.remove(full_address)
 
 	def restore(self, name):
 		pass
 
 a1 = FileManager()
+a1.delete("/home/mohammad/Desktop/challenge_test/", 'test.txt')
