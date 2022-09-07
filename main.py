@@ -2,8 +2,10 @@ import os
 
 
 class FileManager:
-	def find(self, address, name):
-		pass
+	def find(self, address):
+		find_path = os.listdir(address)
+		for path in find_path:
+			print(path)
 
 	def create_file(self, address, name):
 		full_address = os.path.join(address, name)
@@ -22,4 +24,4 @@ class FileManager:
 		pass
 
 a1 = FileManager()
-a1.delete("/home/mohammad/Desktop/challenge_test/", 'test.txt')
+a1.find("/home/mohammad/Desktop/python-test/")
