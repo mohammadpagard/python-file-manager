@@ -1,4 +1,6 @@
 import os
+import subprocess as sp
+# import winshell
 
 
 class FileManager:
@@ -12,7 +14,7 @@ class FileManager:
 		file = open(full_address, "a")
 		file.close()
 
-	def create_folder(self, address, name):
+	def create_dir(self, address, name):
 		full_address = os.path.join(address, name)
 		os.makedirs(full_address)
 
@@ -20,6 +22,15 @@ class FileManager:
 		full_address = os.path.join(address, name)
 		os.remove(full_address)
 
+	def restore(self, name, new_adress=None):
+		# On linux
+		sp.run(['mv', name, new_adress])
+
+		# On windows
+		# r = list(winshell.recycle_bin())
+		# index = r.index(name)
+		# winshell.undelete(r[index].orginal_filename())
+
 
 a1 = FileManager()
-a1.find("/home/mohammad/Desktop/python-test/")
+a1.restore('/home/mohammad/.local/share/Trash/files/test.3.txt', '/home/mohammad/Desktop/test.txt')

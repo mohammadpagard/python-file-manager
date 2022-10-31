@@ -1,0 +1,2 @@
+Send2Trash==1.8.0
+winshell==0.6
