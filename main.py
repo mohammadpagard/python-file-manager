@@ -33,4 +33,5 @@ class FileManager:
 
 
 a1 = FileManager()
-a1.restore('/home/mohammad/.local/share/Trash/files/test.3.txt', '/home/mohammad/Desktop/test.txt')
+# a1.restore('/home/username/.local/share/Trash/files/test.3.txt', '/home/username/Desktop/test.txt')
+# a1.find('/home/username/Desktop/MyFiles/')
